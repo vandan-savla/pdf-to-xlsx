@@ -22,12 +22,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 @app.get("/")
-async def read_index():
-    with open("static/index.html", "r") as f:
+async def read_landing():
+    with open("static/landing.html", "r", encoding="utf-8") as f:
         return Response(content=f.read(), media_type="text/html")
 
+@app.get("/app")
+async def read_app():
+    with open("static/app.html", "r", encoding="utf-8") as f:
+        return Response(content=f.read(), media_type="text/html")
 
 def prepare_pdf_bytes(content: bytes, password: Optional[str] = None) -> bytes:
     """Return bytes of a (possibly decrypted) PDF ready for pdfplumber.
