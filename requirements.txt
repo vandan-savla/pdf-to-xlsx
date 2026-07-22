@@ -1,7 +1,18 @@
+# API
 fastapi
 uvicorn
 python-multipart
+
+# PDF parsing / rendering
 pdfplumber
+pypdf>=3.0.0
+PyMuPDF>=1.24
+
+# Layout analysis + OCR (all open source, no system binaries required)
+opencv-python-headless
+numpy
+rapidocr-onnxruntime
+
+# Output
 pandas
 openpyxl
-pypdf>=3.0.0
