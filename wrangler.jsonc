@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pdf-to-xlsx",
+  "compatibility_date": "2026-07-23",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "static"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
