@@ -34,7 +34,7 @@ def _page(name: str) -> Response:
 
 @app.get("/")
 async def read_landing():
-    return _page("landing.html")
+    return _page("index.html")
 
 
 @app.get("/app")
@@ -76,8 +76,3 @@ async def extract_xlsx(file: UploadFile = File(...), password: Optional[str] = F
             "Content-Disposition": f'attachment; filename="{_safe_stem(file.filename)}.xlsx"'
         },
     )
-
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
